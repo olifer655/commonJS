@@ -8,3 +8,4 @@ require1k 和 tiny-browser-require 的源码来理解其解析（resolve）的�
 
 `ps`: 在ES6之前，最主要的有CommonJS和AMD两种模块加载方案。前者用于服务器，后者用于浏览器。ES6在语言规格的层面上，实现了模块功能，而且实现得相当简单，完全可以取代现有的CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案.
 
+ 总结知识点更多见issues
