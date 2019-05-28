@@ -18,6 +18,9 @@
 ## AMD and CMD
 
 [详解](https://juejin.im/post/5c3592b26fb9a049aa6f4456)
+[Javascript模块化编程（一）：模块的写法](http://www.ruanyifeng.com/blog/2012/10/javascript_module.html)
+[Javascript模块化编程（二）：AMD规范](http://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html)
+[Javascript模块化编程（三）：require.js的用法](http://www.ruanyifeng.com/blog/2012/11/require_js.html)
 
 AMD(Asynchronous Module Definition, 异步模块定义) 是 RequireJS 在推广过程中对模块定义的规范化产出。
 CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。
@@ -62,5 +65,16 @@ b.doSomething()
 })
 
 ```
+
+## amd 原理
+
+无论是传统的script 加载还是 require.js 目的都是让浏览器加载到响应的文件；
+
+分析实现原理：
+可能1：
+编码时的html文件和运行时的html文件是两个文件，即通过某些工具复制并修改了html。可惜修改文件需要服务端程序去做，而require.js只是个js文件，所以不是这个原理。这在node下webpack可以轻松的实现。
+可能2：
+既然可能1是不对的，那么说明了，浏览器运行的html文件和编码时的html文件是一模一样的。所以只剩下第二条路了，就是运行时由js代码去修改html文档~
+
 
 
